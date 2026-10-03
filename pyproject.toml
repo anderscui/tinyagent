@@ -1,0 +1,31 @@
+[project]
+name = "tinyagent"
+version = "0.1.0"
+description = "A naive tiny agent implementation."
+readme = "README.md"
+authors = [
+    { name = "andersc", email = "anderscui@gmail.com" }
+]
+requires-python = ">=3.12"
+license = "MIT"
+license-files = ["LICENSE"]
+
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+
+[build-system]
+requires = ["setuptools>=77.0"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+tinyagent = "tinyagent.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 82
